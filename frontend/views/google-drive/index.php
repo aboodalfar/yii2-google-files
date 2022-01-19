@@ -33,7 +33,11 @@ $this->params['breadcrumbs'][] = $this->title;
                             <td> <a href="<?= $file['exportLinks']['application/pdf'] ?>">Download File</a></td>
                             <td><?= $file['created_at'] ?></td>
                             <td><?= $file['size'] ?></td>
-                            <td></td>
+                            <td>
+                                <?php foreach($file['owners'] as $owner){ ?>
+                                    <?= $owner ?>
+                                <?php } ?>
+                            </td>
                         </tr>
                     <?php } ?>
                 </tbody>

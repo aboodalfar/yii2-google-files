@@ -16,7 +16,7 @@ class GoogleClient implements InterfaceMyFiles
     protected $client_id = '600785800068-j7fcug07kbpe3eosbq1stvfrpo31kepb.apps.googleusercontent.com';
     protected $client_secret = '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';
     //protected $redirect_uri = 'https://developers.google.com/oauthplayground';
-    protected $redirect_uri = 'http://vapco.wewebit.com:8080/index.php?r=google-drive%2Fview';
+    protected $redirect_uri = 'http://localhost:8080/index.php?r=google-drive%2Fview';
     
     protected $scopes = array('https://www.googleapis.com/auth/drive',);
 
@@ -116,7 +116,7 @@ class GoogleClient implements InterfaceMyFiles
 
         $optParams = array(
            'pageSize' => 10,
-           'fields' => 'nextPageToken, files(id, name,createdTime,thumbnailLink,size,exportLinks)'
+           'fields' => 'nextPageToken, files(id, name,createdTime,thumbnailLink,size,exportLinks,owners)'
         );
         // Returns the list of files and folders as object
         $results = $this->service->files->listFiles($optParams);
@@ -135,8 +135,9 @@ class GoogleClient implements InterfaceMyFiles
                 'size' =>$file->getSize(),
                 'created_at' => $file->getCreatedTime(),
                 'hasThumbnail' =>$file->getThumbnailLink(),
-                'exportLinks' => $file->getExportLinks()
-            ];
+                'exportLinks' => $file->getExportLinks(),
+                'owners' => array_map(function($o) { return $o->displayName; }, $file->getOwners())
+            ];          
         }
         return $result;
     }

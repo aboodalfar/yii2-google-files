@@ -17,6 +17,28 @@ deploying the application in different environments.
 
 Documentation is at [docs/guide/README.md](docs/guide/README.md).
 
+<p align="center">
+    Screen Shot Of Page : 
+    <br/>
+    <img src="https://i.ibb.co/Nmkghqt/Screenshot-2022-01-19-at-14-53-25-List-My-Files.png" height="100px">
+    <br>
+</p>
+
+<h1>
+   i recommend use this host http://localhost:8080 because i use this link in google configuration
+</h1>
+<p>
+   link of page 
+   <a href="http://localhost:8080/index.php?r=google-drive%2Fview" target="_blank">
+        http://localhost:8080/index.php?r=google-drive%2Fview
+   </a>
+</p>
+
+```
+ test account :
+    email : wewebit.developers@gmail.com
+    password : wewebit@developers2018
+```
 [![Latest Stable Version](https://img.shields.io/packagist/v/yiisoft/yii2-app-advanced.svg)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
 [![Total Downloads](https://img.shields.io/packagist/dt/yiisoft/yii2-app-advanced.svg)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
 [![build](https://github.com/yiisoft/yii2-app-advanced/workflows/build/badge.svg)](https://github.com/yiisoft/yii2-app-advanced/actions?query=workflow%3Abuild)
