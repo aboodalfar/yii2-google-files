@@ -20,7 +20,7 @@ Documentation is at [docs/guide/README.md](docs/guide/README.md).
 <p align="center">
     Screen Shot Of Page : 
     <br/>
-    <img src="https://i.ibb.co/Nmkghqt/Screenshot-2022-01-19-at-14-53-25-List-My-Files.png" height="100px">
+    <img src="https://i.ibb.co/7RTxcDj/Screenshot-2022-01-19-at-14-53-25-List-My-Files.png">
     <br>
 </p>
 
