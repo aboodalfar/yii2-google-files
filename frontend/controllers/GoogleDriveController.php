@@ -16,13 +16,12 @@ class GoogleDriveController extends Controller{
     
     /**
      * retrieve all my files from google drive
-     * @return type
+     * @return mixed
      */
     public function actionView()
     {
         $request = Yii::$app->request;
         $googleClient = MyFilesFactory::create('google');
-        //$googleClient->getClient()->revokeToken();
         if($request->get('code')){
             // Authenticate and start the session
            $googleClient->authenticate($request->get('code'));
@@ -33,7 +32,6 @@ class GoogleDriveController extends Controller{
         }
        
         $googleClient->initDriveService();
-        // dd($googleClient->listFilesFolders(' ',1));
         return $this->render('index', [
             'data'=>$googleClient->listFilesFolders()
         ]);

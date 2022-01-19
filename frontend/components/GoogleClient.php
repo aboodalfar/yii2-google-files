@@ -16,7 +16,7 @@ class GoogleClient implements InterfaceMyFiles
     protected $client_id = '600785800068-j7fcug07kbpe3eosbq1stvfrpo31kepb.apps.googleusercontent.com';
     protected $client_secret = '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';
     //protected $redirect_uri = 'https://developers.google.com/oauthplayground';
-    protected $redirect_uri = 'http://localhost:8080/index.php?r=google-drive%2Fview';
+    protected $redirect_uri = 'http://vapco.wewebit.com:8080/index.php?r=google-drive%2Fview';
     
     protected $scopes = array('https://www.googleapis.com/auth/drive',);
 
